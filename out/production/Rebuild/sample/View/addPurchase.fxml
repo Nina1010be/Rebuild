@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerPages.PurchaseController">
+   <children>
+      <SplitPane dividerPositions="0.3951973951973952, 0.7798127798127799" layoutX="10.0" layoutY="10.0" orientation="VERTICAL" prefHeight="517.0" prefWidth="734.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.7892376681614349" prefHeight="199.0" prefWidth="715.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="clientTable" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="firstNameClient" prefWidth="67.99993896484375" text="Имя" />
+                                    <TableColumn fx:id="lastNameClient" prefWidth="67.99993896484375" text="Фамилия" />
+                                    <TableColumn fx:id="patronClient" prefWidth="67.99993896484375" text="Отчество" />
+                                    <TableColumn fx:id="phoneNumberClient" prefWidth="67.99993896484375" text="Номер телефона" />
+                                    <TableColumn fx:id="innClient" prefWidth="67.99993896484375" text="ИНН" />
+                                    <TableColumn fx:id="idClient" prefWidth="67.99993896484375" text="ID Клиента" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="152.0" prefWidth="134.0">
+                           <children>
+                              <TextField fx:id="findLastNameClient" promptText="Фамилия" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="55.0" />
+                              <TextField fx:id="findINNClient" promptText="ИНН" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0" />
+                              <Button mnemonicParsing="false" onAction="#onClickFindClient" prefHeight="26.0" prefWidth="198.0" text="Найти" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.7892376681614349" prefHeight="199.0" prefWidth="715.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="productTable">
+                                 <columns>
+                                    <TableColumn fx:id="typeProduct" prefWidth="67.99993896484375" text="Тип изделия" />
+                                    <TableColumn fx:id="nameMasterProduct" prefWidth="67.99993896484375" text="Мастер" />
+                                    <TableColumn fx:id="quantityProduct" prefWidth="67.99993896484375" text="Количество " />
+                                    <TableColumn fx:id="statusProduct" prefWidth="67.99993896484375" text="Статус" />
+                                    <TableColumn fx:id="priceProduct" prefWidth="67.99993896484375" text="Цена изделия" />
+                                    <TableColumn fx:id="idProduct" prefWidth="67.99993896484375" text="ID Изделия" />
+                                    <TableColumn fx:id="idMasterProduct" prefWidth="67.99993896484375" text="ID Мастера" />
+                                    <TableColumn fx:id="idModelProduct" prefWidth="67.99993896484375" text="ID Модели" />
+                                    <TableColumn fx:id="idStatusProduct" prefWidth="67.99993896484375" text="ID Статуса" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="152.0" prefWidth="134.0">
+                           <children>
+                              <TextField fx:id="findTypeProduct" promptText="Тип изделия" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="55.0" />
+                              <TextField fx:id="findLastNameMasterProduct" promptText="Изготовитель" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0" />
+                              <Button mnemonicParsing="false" onAction="#onClickFindProduct" prefHeight="26.0" prefWidth="198.0" text="Найти" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="94.0" prefWidth="817.0">
+               <children>
+                  <TextField fx:id="newQuantityPurchase" prefHeight="26.0" prefWidth="148.0" promptText="Количество" AnchorPane.rightAnchor="138.0" AnchorPane.topAnchor="20.0" />
+                  <Button mnemonicParsing="false" onAction="#onClickAddNewPurchase" prefHeight="27.0" prefWidth="95.0" text="Добавить" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="20.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onClickBackPurchase" prefHeight="26.0" prefWidth="95.0" text="Отмена" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="60.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Label fx:id="selectedProductPurchase" layoutX="257.0" layoutY="24.0" prefHeight="18.0" prefWidth="64.0" text="Изделие" AnchorPane.leftAnchor="257.0" AnchorPane.topAnchor="24.0" />
+                  <Label fx:id="selectedClientPurchase" layoutX="39.0" layoutY="25.0" text="Покупатель" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="25.0" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
